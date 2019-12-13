@@ -44,7 +44,7 @@ init:
 	@echo "Happy Analyzing!"
 
 run_app:
-	cd src && python helloworld.py
+	cd app && python helloworld.py
 
 test:
 	@echo "--------------"
