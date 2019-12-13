@@ -1,7 +1,7 @@
 # sample Makefile for DS Huddle Up
 
 # PHONY prevents issues with files/folders with the same names as makefile commands
-.PHONY: help venv init clean run_app
+.PHONY: help venv init clean run_app test
 
 VIRTUAL_ENV=exp
 	
@@ -45,6 +45,11 @@ init:
 
 run_app:
 	cd src && python helloworld.py
+
+test:
+	@echo "--------------"
+	@echo "Testing environment variables..."
+	cd test && python test_app.py
 
 clean:
 	pyenv uninstall $(VIRTUAL_ENV)
